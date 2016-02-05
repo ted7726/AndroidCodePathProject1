@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#E0E0E0">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/shadow_background"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivPhoto"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:minHeight="50dp"
+            android:layout_below="@+id/ivUserProfile"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="title"
+            android:id="@+id/tvCaption"
+            android:maxHeight="100dp"
+            android:textSize="16sp"
+            android:maxLines="3"
+            android:enabled="true"
+            android:ellipsize="end"
+            android:layout_below="@+id/imageView"
+            android:layout_alignLeft="@+id/ivUserProfile"
+            android:layout_alignStart="@+id/ivUserProfile" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="username"
+            android:id="@+id/tvUsername"
+            android:minHeight="20dp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:layout_alignTop="@+id/ivUserProfile"
+            android:layout_toRightOf="@+id/ivUserProfile"
+            android:layout_toEndOf="@+id/ivUserProfile"
+            android:layout_above="@+id/ivPhoto" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivUserProfile"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            app:riv_corner_radius="20dp"
+            android:minHeight="40dp"
+            android:minWidth="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2h"
+            android:id="@+id/tvTime"
+            android:gravity="center"
+            android:minHeight="30dp"
+            android:textSize="14sp"
+            android:layout_alignTop="@+id/tvUsername"
+            android:layout_alignRight="@+id/ivPhoto"
+            android:layout_alignEnd="@+id/ivPhoto"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_above="@+id/ivPhoto" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="location"
+            android:id="@+id/tvLocation"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:minHeight="15dp"
+            android:textColor="#ff0066ff"
+            android:textSize="12sp"
+            android:layout_alignTop="@+id/ivLocation"
+            android:layout_alignRight="@+id/tvTime"
+            android:layout_alignEnd="@+id/tvTime"
+            android:layout_alignBottom="@+id/ivLocation" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/heart_hollow"
+            android:layout_alignTop="@+id/tvLikes"
+            android:layout_alignLeft="@+id/tvCaption"
+            android:layout_alignStart="@+id/tvCaption" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/ivLocation"
+            android:src="@drawable/location"
+            android:layout_alignTop="@+id/tvComments"
+            android:layout_toLeftOf="@+id/tvLocation"
+            android:layout_toStartOf="@+id/tvLocation" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivTime"
+            android:layout_alignTop="@+id/tvTime"
+            android:minHeight="10dp"
+            android:minWidth="10dp"
+            android:src="@drawable/time"
+            android:layout_toLeftOf="@+id/tvTime"
+            android:layout_above="@+id/ivPhoto" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="135 likes"
+            android:id="@+id/tvLikes"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/imageView"
+            android:layout_toEndOf="@+id/imageView"
+            android:textSize="11sp"
+            android:gravity="center"
+            android:layout_below="@+id/ivPhoto"
+            android:textColor="#ff0077" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/ivComment"
+            android:src="@drawable/comment"
+            android:layout_alignTop="@+id/tvLikes"
+            android:layout_toLeftOf="@+id/tvComments"
+            android:layout_toStartOf="@+id/tvComments" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="121 comments"
+            android:id="@+id/tvComments"
+            android:gravity="center"
+            android:textSize="11sp"
+            android:textColor="#ff0077"
+            android:layout_alignTop="@+id/ivComment"
+            android:layout_toRightOf="@+id/tvUsername"
+            android:layout_toEndOf="@+id/tvUsername"
+            android:layout_alignBottom="@+id/ivComment" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,2 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/wilsonsu/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/wilsonsu/myGit/AndroidCodePathProject1/app/build/intermediates/pre-dexed/debug/picasso-2.5.2_af7774e677f41208729003bc135de55dd3c4fea1.jar" />
+    </item>
+    <item
+        jar="/Users/wilsonsu/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="/Users/wilsonsu/myGit/AndroidCodePathProject1/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1_8e9c859140994b16b03153ba82e889e6c63b0f31.jar" />
+    </item>
+    <item
+        jar="/Users/wilsonsu/myGit/AndroidCodePathProject1/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="/Users/wilsonsu/myGit/AndroidCodePathProject1/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.1_00fe84c24e13956c89c43141c274686e12b37056.jar" />
+    </item>
+    <item
+        jar="/Users/wilsonsu/Work/android-sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="/Users/wilsonsu/myGit/AndroidCodePathProject1/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.1_fd79c0e685cb2dd7ba1e074993e0ef765175230f.jar" />
+    </item>
+    <item
+        jar="/Users/wilsonsu/.gradle/caches/modules-2/files-2.1/org.codehaus.jackson/jackson-core-asl/1.9.13/3c304d70f42f832e0a86d45bd437f692129299a4/jackson-core-asl-1.9.13.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3c304d70f42f832e0a86d45bd437f692129299a4">
+        <dex dex="/Users/wilsonsu/myGit/AndroidCodePathProject1/app/build/intermediates/pre-dexed/debug/jackson-core-asl-1.9.13_ccbec56c75295ee553a91663b5a90854bae85cc7.jar" />
+    </item>
+    <item
+        jar="/Users/wilsonsu/myGit/AndroidCodePathProject1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="/Users/wilsonsu/myGit/AndroidCodePathProject1/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-22.2.1_c5182fdee5a93a68557c999d820e25edb3882be1.jar" />
+    </item>
+    <item
+        jar="/Users/wilsonsu/.gradle/caches/modules-2/files-2.1/org.codehaus.jackson/jackson-mapper-asl/1.9.13/1ee2f2bed0e5dd29d1cb155a166e6f8d50bbddb7/jackson-mapper-asl-1.9.13.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="1ee2f2bed0e5dd29d1cb155a166e6f8d50bbddb7">
+        <dex dex="/Users/wilsonsu/myGit/AndroidCodePathProject1/app/build/intermediates/pre-dexed/debug/jackson-mapper-asl-1.9.13_849410cf6cae65b4029a3d860f64a34e00e7e802.jar" />
+    </item>
+    <item
+        jar="/Users/wilsonsu/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.9/386a4339ffe52d5d63e80f9bed8d2b1d1a418249/android-async-http-1.4.9.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="386a4339ffe52d5d63e80f9bed8d2b1d1a418249">
+        <dex dex="/Users/wilsonsu/myGit/AndroidCodePathProject1/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.9_234e79495a260f23ab976de5c9e69baa92d1cb9d.jar" />
+    </item>
+    <item
+        jar="/Users/wilsonsu/myGit/AndroidCodePathProject1/app/build/intermediates/exploded-aar/com.makeramen/roundedimageview/2.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="814fc0c3ec69a944add398217d90077301501a74">
+        <dex dex="/Users/wilsonsu/myGit/AndroidCodePathProject1/app/build/intermediates/pre-dexed/debug/com.makeramen-roundedimageview-2.2.1_6c30a633c5b496e554cc5065cb12477947b4bec8.jar" />
+    </item>
+    <item
+        jar="/Users/wilsonsu/myGit/AndroidCodePathProject1/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="/Users/wilsonsu/myGit/AndroidCodePathProject1/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-22.2.1_e472ce27131692d2e85ffa4fe2a444ed7b8870f4.jar" />
+    </item>
+    <item
+        jar="/Users/wilsonsu/.gradle/caches/modules-2/files-2.1/cz.msebera.android/httpclient/4.3.6/526a9f794eab830eae4f23a62c572878b3f491ab/httpclient-4.3.6.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="526a9f794eab830eae4f23a62c572878b3f491ab">
+        <dex dex="/Users/wilsonsu/myGit/AndroidCodePathProject1/app/build/intermediates/pre-dexed/debug/httpclient-4.3.6_7ce6950ceb9e29d036b4854d7843e905d5111565.jar" />
+    </item>
+
+</items>

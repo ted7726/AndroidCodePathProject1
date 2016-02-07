@@ -15,6 +15,9 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 /**
  * Created by wilsonsu on 2/2/16.
  */
@@ -35,19 +38,7 @@ public class InstagramPhotoAdapter extends ArrayAdapter<InstagramPhoto> {
         // Check if an existing view is being reused, otherwise inflate the view
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_photo, parent, false);
-            viewHolder = new InstagramPhotoViewHolderItem();
-
-            // findViewById map to viewHolder
-            viewHolder.ivPhoto= (ImageView) convertView.findViewById(R.id.ivPhoto);
-            viewHolder.ivProfile = (ImageView) convertView.findViewById(R.id.ivUserProfile);
-            viewHolder.ivLocation = (ImageView) convertView.findViewById(R.id.ivLocation);
-            viewHolder.tvTitle = (TextView) convertView.findViewById(R.id.tvCaption);
-            viewHolder.tvTime = (TextView) convertView.findViewById(R.id.tvTime);
-            viewHolder.tvUsername = (TextView) convertView.findViewById(R.id.tvUsername);
-            viewHolder.tvLocation = (TextView) convertView.findViewById(R.id.tvLocation);
-            viewHolder.tvComments = (TextView) convertView.findViewById(R.id.tvComments);
-            viewHolder.tvLikes = (TextView) convertView.findViewById(R.id.tvLikes);
-
+            viewHolder = new InstagramPhotoViewHolderItem(convertView);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (InstagramPhotoViewHolderItem) convertView.getTag();
@@ -84,5 +75,21 @@ public class InstagramPhotoAdapter extends ArrayAdapter<InstagramPhoto> {
 
         // Return the completed view to render on screen
         return convertView;
+    }
+
+    static class InstagramPhotoViewHolderItem {
+        @Bind(R.id.tvCaption)   TextView tvTitle;
+        @Bind(R.id.tvUsername)  TextView tvUsername;
+        @Bind(R.id.tvTime)      TextView tvTime;
+        @Bind(R.id.tvLocation)  TextView tvLocation;
+        @Bind(R.id.tvLikes)     TextView tvLikes;
+        @Bind(R.id.tvComments)  TextView tvComments;
+        @Bind(R.id.ivUserProfile)ImageView ivProfile;
+        @Bind(R.id.ivPhoto)     ImageView ivPhoto;
+        @Bind(R.id.ivLocation)  ImageView ivLocation;
+
+        public InstagramPhotoViewHolderItem(View view) {
+            ButterKnife.bind(this, view);
+        }
     }
 }

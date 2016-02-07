@@ -43,5 +43,6 @@ dependencies {
     // SwipeRefreshLayout
     compile 'com.android.support:support-v4:22.1.1'
 
-
+    // Butterknife
+    compile 'com.jakewharton:butterknife:7.0.1'
 }

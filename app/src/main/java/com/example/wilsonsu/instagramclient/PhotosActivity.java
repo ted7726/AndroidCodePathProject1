@@ -18,6 +18,8 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import cz.msebera.android.httpclient.Header;
 
 public class PhotosActivity extends AppCompatActivity {
@@ -25,13 +27,17 @@ public class PhotosActivity extends AppCompatActivity {
     private static final String CLIENT_ID = "e05c462ebd86446ea48a5af73769b602";
     private ArrayList<InstagramPhoto> photos;
     private InstagramPhotoAdapter aPhotos;
-    private SwipeRefreshLayout swipeContainer;
+
+    @Bind(R.id.swipeContainer) SwipeRefreshLayout swipeContainer;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_photos);
+        ButterKnife.bind(this);
+
+
         photos = new ArrayList<InstagramPhoto>();
         // create adapter linking it to the resource
         aPhotos = new InstagramPhotoAdapter(this, R.layout.item_photo, photos);
@@ -40,7 +46,7 @@ public class PhotosActivity extends AppCompatActivity {
         lvPhotos.setAdapter(aPhotos);
 
         //setup swipe container
-        swipeContainer = (SwipeRefreshLayout) findViewById(R.id.swipeContainer);
+//        swipeContainer = (SwipeRefreshLayout) findViewById(R.id.swipeContainer);
 
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override

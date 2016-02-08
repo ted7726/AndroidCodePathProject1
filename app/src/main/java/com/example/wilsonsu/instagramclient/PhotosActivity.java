@@ -1,8 +1,11 @@
 package com.example.wilsonsu.instagramclient;
 
+import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.widget.ListView;
 
 import com.example.wilsonsu.instagramclient.Models.InstagramMeta;
@@ -17,6 +20,8 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -101,4 +106,20 @@ public class PhotosActivity extends AppCompatActivity {
             }
         };
     }
+
+    public void onCommentsClick(View view) {
+        // show comments Activity
+
+    }
+
+    public void onPlayVideo(View view) {
+        // show comments Activity
+        String url = view.getTag().toString();
+        if (url.length()>0) {
+            FragmentManager fm = getSupportFragmentManager();
+            VideoFragmentDialog videoFD = VideoFragmentDialog.newInstance(url);
+            videoFD.show(fm, "fragment_video");
+        }
+    }
 }
+

@@ -40,5 +40,9 @@ public class PhotosClient {
         client.get(url, params, handler);
     }
 
-
+    public void getComments(String id, JsonHttpResponseHandler handler) {
+        String url = getApiUrl(id+"/comments");
+        RequestParams params = new RequestParams("client_id", CLIENT_ID);
+        client.get(url, params, handler);
+    }
 }

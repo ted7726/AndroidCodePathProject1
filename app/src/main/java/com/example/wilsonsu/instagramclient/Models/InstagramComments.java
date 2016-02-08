@@ -1,5 +1,7 @@
 package com.example.wilsonsu.instagramclient.Models;
 
+import org.codehaus.jackson.annotate.JsonProperty;
+
 import java.util.ArrayList;
 
 /**
@@ -7,4 +9,7 @@ import java.util.ArrayList;
  */
 public class InstagramComments {
     public int count;
+
+    @JsonProperty("data")
+    public ArrayList<InstagramComment> comments;
 }

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/ivCommentUserProfile"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        app:riv_corner_radius="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="title"
+        android:maxHeight="100dp"
+        android:textSize="14sp"
+        android:maxLines="3"
+        android:enabled="true"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:id="@+id/tvCommentText"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toLeftOf="@+id/ivCommentTime"
+        android:layout_toStartOf="@+id/ivCommentTime"
+        android:layout_toRightOf="@+id/ivCommentUserProfile"
+        android:layout_toEndOf="@+id/ivCommentUserProfile"
+        android:layout_below="@+id/tvCommentUserText"
+        />
+
+    <ImageView
+        android:id="@+id/ivCommentTime"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvCommentTime"
+        android:src="@drawable/time"
+        android:layout_toLeftOf="@+id/tvCommentTime"
+        android:layout_above="@+id/ivPhoto" />
+
+    <TextView
+        android:id="@+id/tvCommentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2h"
+        android:gravity="center"
+        android:minHeight="30dp"
+        android:textSize="10sp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_alignTop="@+id/ivCommentUserProfile"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="username"
+        android:id="@+id/tvCommentUserText"
+        android:textSize="12sp"
+        android:layout_alignTop="@+id/ivCommentUserProfile"
+        android:layout_alignLeft="@+id/tvCommentText"
+        android:layout_alignStart="@+id/tvCommentText" />
+
+</RelativeLayout>

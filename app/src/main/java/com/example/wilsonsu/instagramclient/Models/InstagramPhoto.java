@@ -12,6 +12,7 @@ public class InstagramPhoto {
 
     public String type;
     public String link;
+    public String id;
     public InstagramComments comments;
     public InstagramUser user;
 
@@ -29,6 +30,10 @@ public class InstagramPhoto {
 
     @JsonProperty("likes")
     public int likesCount;
+
+
+    @JsonProperty("videos")
+    public InstagramVideos videos;
 
     public void setTime(Date time) {
         time.setTime(time.getTime()*1000);

@@ -3,62 +3,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#E0E0E0">
+    android:background="#D0D0D0">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="3dp"
-        android:layout_marginLeft="6dp"
-        android:layout_marginRight="6dp"
-        android:layout_marginBottom="3dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
         android:background="@drawable/shadow_background"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
         <ImageView
+            android:id="@+id/ivPhoto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/ivPhoto"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="5dp"
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
             android:minHeight="50dp"
-            android:layout_below="@+id/ivUserProfile"
+            android:layout_below="@+id/ivCommentUserProfile"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
         <TextView
+            android:id="@+id/tvCaption"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="title"
-            android:id="@+id/tvCaption"
             android:maxHeight="100dp"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:maxLines="3"
             android:enabled="true"
             android:ellipsize="end"
-            android:layout_below="@+id/imageView"
-            android:layout_alignLeft="@+id/ivUserProfile"
-            android:layout_alignStart="@+id/ivUserProfile" />
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@+id/ivHeart"
+            android:layout_alignLeft="@+id/ivCommentUserProfile"
+            android:layout_alignStart="@+id/ivCommentUserProfile" />
 
         <TextView
+            android:id="@+id/tvUsername"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="username"
-            android:id="@+id/tvUsername"
             android:minHeight="20dp"
             android:gravity="center"
-            android:textSize="14sp"
-            android:layout_alignTop="@+id/ivUserProfile"
-            android:layout_toRightOf="@+id/ivUserProfile"
-            android:layout_toEndOf="@+id/ivUserProfile"
+            android:textSize="16sp"
+            android:layout_marginLeft="3dp"
+            android:layout_alignTop="@+id/ivCommentUserProfile"
+            android:layout_toRightOf="@+id/ivCommentUserProfile"
+            android:layout_toEndOf="@+id/ivCommentUserProfile"
             android:layout_above="@+id/ivPhoto" />
 
         <com.makeramen.roundedimageview.RoundedImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/ivUserProfile"
+            android:id="@+id/ivCommentUserProfile"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
@@ -69,13 +74,13 @@
             android:layout_marginLeft="10dp" />
 
         <TextView
+            android:id="@+id/tvCommentTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2h"
-            android:id="@+id/tvTime"
             android:gravity="center"
             android:minHeight="30dp"
-            android:textSize="14sp"
+            android:textSize="10sp"
             android:layout_alignTop="@+id/tvUsername"
             android:layout_alignRight="@+id/ivPhoto"
             android:layout_alignEnd="@+id/ivPhoto"
@@ -84,83 +89,178 @@
             android:layout_above="@+id/ivPhoto" />
 
         <TextView
+            android:id="@+id/tvLocation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="location"
-            android:id="@+id/tvLocation"
             android:gravity="center"
             android:textAlignment="center"
             android:minHeight="15dp"
-            android:textColor="#ff0066ff"
+            android:textColor="@color/colorBlue"
             android:textSize="12sp"
+            android:textStyle="bold"
             android:layout_alignTop="@+id/ivLocation"
-            android:layout_alignRight="@+id/tvTime"
-            android:layout_alignEnd="@+id/tvTime"
+            android:layout_alignRight="@+id/tvCommentTime"
+            android:layout_alignEnd="@+id/tvCommentTime"
             android:layout_alignBottom="@+id/ivLocation" />
 
         <ImageView
+            android:id="@+id/ivHeart"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:id="@+id/imageView"
             android:src="@drawable/heart_hollow"
-            android:layout_alignTop="@+id/tvLikes"
+            android:layout_marginTop="5dp"
             android:layout_alignLeft="@+id/tvCaption"
-            android:layout_alignStart="@+id/tvCaption" />
+            android:layout_alignStart="@+id/tvCaption"
+            android:layout_below="@+id/ivPhoto"/>
 
         <ImageView
+            android:id="@+id/ivLocation"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:id="@+id/ivLocation"
             android:src="@drawable/location"
             android:layout_alignTop="@+id/tvComments"
             android:layout_toLeftOf="@+id/tvLocation"
             android:layout_toStartOf="@+id/tvLocation" />
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:id="@+id/ivCommentTime"
+            android:layout_width="20dp"
             android:layout_height="wrap_content"
-            android:id="@+id/ivTime"
-            android:layout_alignTop="@+id/tvTime"
-            android:minHeight="10dp"
-            android:minWidth="10dp"
+            android:layout_alignTop="@+id/tvCommentTime"
             android:src="@drawable/time"
-            android:layout_toLeftOf="@+id/tvTime"
+            android:layout_toLeftOf="@+id/tvCommentTime"
             android:layout_above="@+id/ivPhoto" />
 
         <TextView
+            android:id="@+id/tvLikes"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:text="135 likes"
-            android:id="@+id/tvLikes"
-            android:layout_marginTop="15dp"
-            android:layout_toRightOf="@+id/imageView"
-            android:layout_toEndOf="@+id/imageView"
-            android:textSize="11sp"
+            android:layout_toRightOf="@+id/ivHeart"
+            android:layout_toEndOf="@+id/ivHeart"
+            android:layout_alignTop="@+id/ivHeart"
             android:gravity="center"
-            android:layout_below="@+id/ivPhoto"
-            android:textColor="#ff0077" />
+            android:text="135"
+            android:textSize="11sp"
+            android:textColor="@color/colorPink"/>
 
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:id="@+id/ivComment"
             android:src="@drawable/comment"
-            android:layout_alignTop="@+id/tvLikes"
-            android:layout_toLeftOf="@+id/tvComments"
-            android:layout_toStartOf="@+id/tvComments" />
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tvLikes"
+            android:layout_toEndOf="@+id/tvLikes"
+            android:layout_alignTop="@+id/ivHeart"
+            />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="121 comments"
+            android:text="121"
             android:id="@+id/tvComments"
             android:gravity="center"
             android:textSize="11sp"
-            android:textColor="#ff0077"
-            android:layout_alignTop="@+id/ivComment"
-            android:layout_toRightOf="@+id/tvUsername"
-            android:layout_toEndOf="@+id/tvUsername"
-            android:layout_alignBottom="@+id/ivComment" />
+            android:textColor="@color/colorPink"
+            android:layout_alignTop="@+id/ivHeart"
+            android:layout_toRightOf="@+id/ivComment"
+            android:layout_toEndOf="@+id/ivComment"
+            android:layout_alignBottom="@+id/ivComment"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btComments"
+            android:layout_alignTop="@+id/ivHeart"
+            android:layout_alignRight="@+id/tvComments"
+            android:layout_alignEnd="@+id/tvComments"
+            android:layout_alignLeft="@+id/ivComment"
+            android:layout_alignStart="@+id/ivComment"
+            android:layout_alignBottom="@+id/ivComment"
+            android:background="@color/colorClear"
+            />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivPlayButton"
+            android:layout_alignBottom="@+id/ivPhoto"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@+id/ivPhoto"
+            android:background="@color/colorClear"
+            android:src="@android:drawable/ic_media_play"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btPlayButton"
+            android:layout_alignTop="@+id/ivPlayButton"
+            android:layout_alignRight="@+id/ivPlayButton"
+            android:layout_alignEnd="@+id/ivPlayButton"
+            android:layout_alignLeft="@+id/ivPlayButton"
+            android:layout_alignStart="@+id/ivPlayButton"
+            android:layout_alignBottom="@+id/ivPlayButton"
+            android:background="@color/colorClear"
+            android:onClick="onPlayVideo"/>
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivLatestCommentUserProfile1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:riv_corner_radius="20dp"
+            android:minHeight="40dp"
+            android:minWidth="40dp"
+            android:layout_below="@+id/tvCaption"
+            android:layout_alignLeft="@+id/tvCaption"
+            android:layout_alignStart="@+id/tvCaption"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comment"
+            android:textSize="12sp"
+            android:maxLines="2"
+            android:id="@+id/ivLatestCommentText1"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/tvCaption"
+            android:layout_toRightOf="@+id/ivLatestCommentUserProfile1"
+            android:layout_alignBottom="@+id/ivLatestCommentUserProfile1"
+            android:layout_alignRight="@+id/tvLocation"
+            android:layout_alignEnd="@+id/tvLocation" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivLatestCommentUserProfile2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:riv_corner_radius="20dp"
+            android:minHeight="40dp"
+            android:minWidth="40dp"
+            android:layout_below="@+id/tvCaption"
+            android:layout_alignLeft="@+id/tvCaption"
+            android:layout_alignStart="@+id/tvCaption"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comment"
+            android:textSize="12sp"
+            android:maxLines="2"
+            android:id="@+id/ivLatestCommentText2"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/tvCaption"
+            android:layout_toRightOf="@+id/ivLatestCommentUserProfile1"
+            android:layout_alignBottom="@+id/ivLatestCommentUserProfile1"
+            android:layout_alignRight="@+id/tvLocation"
+            android:layout_alignEnd="@+id/tvLocation" />
+
     </RelativeLayout>
 
 </RelativeLayout>

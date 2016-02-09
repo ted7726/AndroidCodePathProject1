@@ -4,15 +4,20 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#D0D0D0">
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="5dp"
+    android:layout_gravity="center">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="5dp"
-        android:background="@drawable/shadow_background"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
@@ -21,7 +26,6 @@
             android:id="@+id/ivPhoto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="1dp"
             android:layout_marginTop="5dp"
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
@@ -262,5 +266,6 @@
             android:layout_alignEnd="@+id/tvLocation" />
 
     </RelativeLayout>
+</android.support.v7.widget.CardView>
 
 </RelativeLayout>
